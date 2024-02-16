@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, useNavigate } from "react-router-dom";
 
-function Dogs() {
+function DogList() {
     const navigate = useNavigate();
     return (
         <div>
@@ -10,4 +10,4 @@ function Dogs() {
     );
 };
 
-export default Dogs;
+export default DogList;

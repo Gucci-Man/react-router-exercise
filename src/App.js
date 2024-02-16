@@ -1,16 +1,15 @@
 import './App.css';
 import React from 'react';
-import { Routes, Route, Navigate, Switch } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 
 import Nav from "./Nav";
-import Dogs from "./Dogs";
+import DogList from "./DogList";
 import whiskey from "./Whiskey";
 import duke from "./Duke";
 import perry from "./Perry";
 import tubby from "./Tubby";
 
-App.defaultProps = {
-  dogs: [
+let dogs = [
     {
       name: "Whiskey",
       age: 5,
@@ -52,14 +51,14 @@ App.defaultProps = {
       ]
     }
   ]
-}
+
 
 function App() {
   return (
     <div className="App">
-      <Nav />
+      <Nav dogs={dogs}/>
       <Routes>
-        <Route path="/dogs" element={<Dogs />} />
+        <Route path="/dogs" element={<DogList />} />
       </Routes>
     </div>
   );
