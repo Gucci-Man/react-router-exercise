@@ -1,10 +1,10 @@
-import Router from "react-router";
-Router.useParams = jest.fn();
-import DogDetails from './DogDetails';
+import React from 'react';
+import { render } from '@testing-library/react';
+import App from './App';
+import { MemoryRouter } from 'react-router-dom';
+import '@testing-library/jest-dom';
 
-import { render, screen, waitFor } from '@testing-library/react';
 
-test('renders learn react link', () => {
-  Router.useParams.mockReturnValue({a: "b"});	
-  render(<DogDetail />)
+it('renders without crashing', () => {
+  render(<MemoryRouter><App /></MemoryRouter>)
 });

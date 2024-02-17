@@ -1,13 +1,12 @@
 import './App.css';
 import React from 'react';
-import { Routes, Route, Navigate } from "react-router-dom";
 
 import Nav from "./Nav";
-import DogList from "./DogList";
 import whiskey from "./Whiskey";
 import duke from "./Duke";
 import perry from "./Perry";
 import tubby from "./Tubby";
+import RouteList from "./RouteList";
 
 let dogs = [
     {
@@ -57,9 +56,9 @@ function App() {
   return (
     <div className="App">
       <Nav dogs={dogs}/>
-      <Routes>
-        <Route path="/dogs" element={<DogList />} />
-      </Routes>
+      <div className="container">
+        <RouteList dogs={dogs}/>
+      </div>
     </div>
   );
 }

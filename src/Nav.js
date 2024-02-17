@@ -6,7 +6,7 @@ function Nav({ dogs }) {
     const links = dogs.map(dog => (
         <Link 
             key={dog.name}
-            to={`/dooggs/$${dog.name.toLowerCase()}`}
+            to={`/dogs/${dog.name.toLowerCase()}`}
         >
             {dog.name}
         </Link>
@@ -15,7 +15,7 @@ function Nav({ dogs }) {
     return (
         <nav className='Nav'>
             <Link to="/dogs">
-                Dogs
+                Home
             </Link>
             {links}
         </nav>
